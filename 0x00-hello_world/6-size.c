@@ -7,10 +7,16 @@
  */
 int main(void)
 {
-	printf("\nsize of the character data type is %d",sizeof(char));
-	printf("\nsize of the integer data type is %d",sizeof(int));
-	printf("\nsize of the long integer data type is %d",sizeof(long int));
-	printf("\nsize of the long long integer data type is %d",sizeof(long long int));
-	printf("\nsize of the float data type is %d",sizeof(float));
+	character char;
+	integer int;
+	long integer long int;
+	long long integer long long int;
+	float float;
+
+	printf("Size of character: %zu bytes\n", sizeof(char));
+	printf("Size of integer: %zu bytes\n", sizeof(int));
+	printf("Size of long integer: %zu bytes\n", sizeof(long int));
+	printf("Size of long long integer: %zu bytes\n", sizeof(long long int));
+	printf("Size of float: %zu bytes\n", sizeof(float));
 	return (0);
 }
