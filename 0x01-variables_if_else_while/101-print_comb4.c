@@ -11,14 +11,14 @@ int main(void)
 {
 	int x, y, z;
 
-	for (x = 0, x <= 7; x++)
+	for (x = 0; x <= 7; x++)
 	{
 		for (y = x + 1; y <= 8; y++)
 		{
 			for (z = y + 1; z <= 9; z++)
 			{
 				putchar(x + '0');/*print first digit*/
-				putchar(y + '0);/*print second digit*/
+				putchar(y + '0');/*print second digit*/
 				putchar(z + '0');/*print third digit*/
 
 				if (!(x == 7 && y == 8 && z == 9))/*check if its not the last combination*/
