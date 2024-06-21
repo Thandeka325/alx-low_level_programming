@@ -5,13 +5,12 @@
  * Numbers range from 0 to 99,two numbers separated by a space
  * Printed with 2 digits
  * Combination separated by comma and a space,ascending order
- * print_number - prints a two-digit number using putchar
+ * print_number - Function that prints a two-digit.
  * @n: the number to print
- * Description: The print_number function prints a two-digit number by splitting it into tens and units
- * printing each digit using putchar
+ * Description: can only use _putchar to print.
  * Return: 0 (Success)
  */
-void print_number(int n)/*print_number function prints a two digit number*/
+void print_number(int n)
 {
 	putchar((n / 10) + '0');
 	putchar((n % 10) + '0');
