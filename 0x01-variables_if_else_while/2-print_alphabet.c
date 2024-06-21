@@ -9,7 +9,7 @@ int main(void)
 {
 	char letter;
 
-	for (letter = 'a'; letter <= 'z'; letter++) /**loop used to iterate over the char from a-z */
+	for (letter = 'a'; letter <= 'z'; letter++)/**loop used to iterate over the char from a-z */
 	{
 		putchar(letter);
 	}
