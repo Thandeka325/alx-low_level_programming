@@ -1,43 +1,46 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
- * main - Print all possible combinations of two-digit numbers
- * Numbers range from 0 to 99,two numbers separated by a space
- * Printed with 2 digits
- * Combination separated by comma and a space,ascending order
- * printnumber - Function that prints a two-digit.
- * @n: the number to print
- * Description: 'printnumber function splits two-digit into tens and unit digit'
+ * main - Print all possible combinations of two two-digit numbers
+ * The numbers should range from 0 to 99
+ * The two numbers should be separated by a space
+ * All numbers should be printed with two digits. 1 should be printed as 01
+ * The combination of numbers must be separated by comma, followed by a space
+ * The combinations of numbers should be printed in ascending order
+ *
  * Return: 0 (Success)
  */
-void printnumber(int n)
-{
-	putchar((n / 10) + '0');
-	putchar((n % 10) + '0');
-}
-
 int main(void)
 {
-	int num1, num2;
+	int i, j;
+	int a, b, c, d;
 
-	for (num1 = 0; num1 <= 99; num1++)
+	for (i = 0; i < 100; i++)
 	{
-		for (num2 = num1 + 1; num2 <= 99; num2++)
-		{
-			printnumber(num1);
-			putchar(' ');
-			printnumber(num2);
+		a = i / 10; /*doubles fnum*/
+		b = i % 10; /*singles fnum*/
 
-			if (!(num1 == 98 && num2 == 99))
+		for (j = 0; j < 100; j++)
+		{
+			c = j / 10; /* doubles snum */
+			d = j % 10; /* singles snum */
+
+			if (a < c || (a == c && b < d))
 			{
-				putchar(',');
-				putchar(' ');
+				putchar(a + '0');
+				putchar(b + '0');
+				putchar(32);
+				putchar(c + '0');
+
+				if (!(a == 9 && b == 8))
+				{
+					putchar(44);
+					putchar(32);
+				}
 			}
 		}
 	}
-
-	putchar('\n');
+	putchar(10);
 
 	return (0);
 }
