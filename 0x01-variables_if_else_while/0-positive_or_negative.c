@@ -1,8 +1,9 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include <time.h>
 
 /**
- * main - Entry point
+ * main - Prints if number is positive, negative or zero
  *
  * Return: 0 (Success)
  */
@@ -11,22 +12,19 @@ int main(void)
 	int n;
 
 	srand(time(0));
-	n = rand() - Rand_MAX / 2;
-	printf("%d \n", n);
-
+	n = rand() - RAND_MAX / 2;
 
 	if (n > 0)
 	{
-		printf("The number is positive\n");
+		printf("%d is positive\n", n);
 	}
-	else if (n = 0)
+	else if (n == 0)
 	{
-		printf("The number is zero\n");
+		printf("%d is zero\n", n);
 	}
-	else (n < 0)
+	else
 	{
-		printf("The number is negative\n");
+		printf("%d is negative\n", n);
 	}
 	return (0);
 }
-
