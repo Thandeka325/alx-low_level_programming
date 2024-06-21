@@ -5,7 +5,7 @@
  *
  * for loop iterates over the integers from 0 to 9
  *
- * inside the loop,the integer is converted to its corresponding character by adding the ASCII value of 0
+ * inside the loop,integer converted by adding the ASCII value of 0
  *
  * Return: 0 (Success)
  */
