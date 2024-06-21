@@ -8,7 +8,7 @@
  * Combination separated by comma and a space,ascending order
  * printnumber - Function that prints a two-digit.
  * @n: the number to print
- * Description: can only use putchar to print
+ * Description: 'printnumber function splits two-digit into tens and unit digit'
  * Return: 0 (Success)
  */
 void printnumber(int n)
