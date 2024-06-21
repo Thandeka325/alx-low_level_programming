@@ -1,8 +1,10 @@
 #include <stdio.h>
 
 /**
- * main - Print all alphabets in lowercase except q and e
- * Inside the loop,an if statement checks if the current letter is not q and not e
+ * main - Print all alphabets in lowercase, except letter e and q
+ *
+ * The if function inside the loop checks if the letter is not e or q
+ *
  * Return: 0 (Success)
  */
 int main(void)
