@@ -5,7 +5,8 @@
  * Numbers range from 0 to 99,two numbers separated by a space
  * Printed with 2 digits
  * Combination separated by comma and a space,ascending order
- *
+ * Description: helper function print_number is defined to print a two-digit number
+ * @parameter: when printing tens and units digit separately,converting each to a chararcter
  * Return: 0 (Success)
  */
 void print_number(int n)
@@ -20,7 +21,7 @@ int main(void)
 
 	for (num1 = 0; num1 <= 99; num1++)
 	{
-		for (num2 = num1 +1; num2 <= 99; num2++)
+		for (num2 = num1 + 1; num2 <= 99; num2++)
 		{
 			print_number(num1);
 			putchar(' ');
