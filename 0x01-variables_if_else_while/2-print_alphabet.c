@@ -7,10 +7,10 @@
  */
 int main(void)
 {
-	char letter;
+	char c;
 
-	for (letter = 'a'; letter <= 'z'; letter++)/**loop used to iterate over the char from a-z*/
-		putchar(letter);
+	for (c = 'a'; c <= 'z'; c++)/**loop used to iterate over the char from a-z*/
+		putchar(c);
 	
 	putchar('\n');
 	return (0);
