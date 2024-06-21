@@ -1,15 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - Print all alphabets in lowercase and uppercase
+ * main - Print all the alphabets in lowercase and uppercase
  *
  * Return: 0 (Success)
  */
 int main(void)
 {
 	char c;
-	
-	for (c = 'a'; c <= 'z'; c++)
+
+	for (c = 'a'; c <='z'; c++)
 	{
 		putchar(c);
 	}
@@ -18,6 +18,8 @@ int main(void)
 	{
 		putchar(c);
 	}
+
 	putchar('\n');
+
 	return (0);
 }
