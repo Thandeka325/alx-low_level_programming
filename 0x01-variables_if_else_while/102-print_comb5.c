@@ -7,10 +7,11 @@
  * Combination separated by comma and a space,ascending order
  * print_number - prints a two-digit number using putchar
  * @n: the number to print
- * Description: This function prints a two-digit number by splitting it into tens and units and printing each digit using putchar
+ * Description: The print_number function prints a two-digit number by splitting it into tens and units
+ * printing each digit using putchar
  * Return: 0 (Success)
  */
-void print_number(int n)
+void print_number(int n)/*print_number function prints a two digit number*/
 {
 	putchar((n / 10) + '0');
 	putchar((n % 10) + '0');
