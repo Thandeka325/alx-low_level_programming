@@ -14,9 +14,9 @@ int main(void)
 
 	while (i < 1024)
 	{
-		if (i % 3 ==0)
+		if (i % 3 == 0)
 			total += i;
-		else if (i % 5 ==0)
+		else if (i % 5 == 0)
 			total += i;
 
 		i++;
