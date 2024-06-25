@@ -10,7 +10,7 @@
  * Prints each number followed by comma & space
  * If false (n > 98) iterates from 'n' down to 98
  */
-void print_to_98(int n);
+void print_to_98(int n)
 {
 	int i;
 
