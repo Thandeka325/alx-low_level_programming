@@ -3,31 +3,49 @@
 
 /**
  * print_times_table - Prints the 'n' times table, starting with 0
- * @n: Number to print times table for
- * Takes integer 'n' as input
- * Checks if 'n'is within valid range (0 to 15)
- * 'for' loops iterare through rows(i) & columns(j)
- * It calculates the product 'i * j'
- * Prints it formatted o ensure proper alignment(%2d and %4d)
- * If 'n' is > 15, < 0 function should not print anything
+ * @n: Number to print
+ * Description: If 'n' is > 15 0r < 0 print anything
  *
  */
 void print_times_table(int n)
 {
-	if (n < 0 || n > 15)
+	int x = 0, y, z;
+
+	if (n > 15 || n < 0)
 		return;
-
-	int i, j;
-
-	for (i = 0; i <= n; i++)
+	while (x <= n)
 	{
-		for (j = 0; j <= n; j++)
+		for (y = 0); y <= n; y++)
 		{
-			if (j == 0)
-				printf("%2d", i * j);
+			z = x * y;
+			if (z > 99)
+			{
+				_putchar(z / 100 + '0');
+				_putchar((z / 10 % 10) + '0');
+				_putchar(z % 10 + '0');
+			}
+			else if (z > 9)
+			{
+				_putchar(' ');
+				_putchar(z / 10 + '0');
+				_putchar(z % 10 + '0');
+			}
+			else if (y != 0)
+			{
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(z + '0');
+			}
 			else
-				printf("%4d", i * j);
+				_putchar(z + '0');
+
+			if (y != n)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
-		printf("\n");
+		_putchar('\n');
+		x++;
 	}
 }
