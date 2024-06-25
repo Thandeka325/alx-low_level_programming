@@ -10,7 +10,7 @@
  * Prints the 10s and units digits separately product>=10
  * Prints the units digit directly if product <10
  */
-int void times_table(void)
+void times_table(void)
 {
 	int i, j, product;
 
