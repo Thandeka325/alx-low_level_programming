@@ -14,7 +14,7 @@ void print_alphabet_x10(void)
 
 	for (i = 0; i < 10; i++)
 	{
-		for (j = 0; alphabet[j] != '\0'; j++)/**nested loop, runs 10x, inner loop iterates over alphabet string*/
+		for (j = 0; alphabet[j] != '\0'; j++)
 		{
 			_putchar(alphabet[j]);
 		}
