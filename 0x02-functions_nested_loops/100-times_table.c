@@ -12,7 +12,7 @@
  * If 'n' is > 15, < 0 function should not print anything
  *
  */
-void print_times_table(int n)
+void print_times_table(void)
 {
 	if (n < 0 || n > 15)
 	{
