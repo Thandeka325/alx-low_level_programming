@@ -2,11 +2,11 @@
 
 /**
  * _isdigit - Checks for a digit(0 through 9)
- * @c: The digit to check
+ * @c: The digit to be check
  *
  * Return: 1 if c is a digit, 0 otherwise
  */
-int _isdigit(int c);
+int _isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 	{
