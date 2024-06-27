@@ -5,6 +5,7 @@
  * Prints the numbers from 1 to 100, followed by a new line.
  * For multiples of three, prints "Fizz" instead of the number.
  * For numbers which are multiples of both three and five print FizzBuzz
+ * Return: 0 (Success)
  */
 int main(void)
 {
@@ -39,4 +40,3 @@ int main(void)
 
 	return (0);
 }
-
