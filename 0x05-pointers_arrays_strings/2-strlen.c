@@ -2,19 +2,22 @@
 
 /**
  * _strlen - Returns the length of a string
- * @s: Pointer to the string
- * The length is calculated by counting the number,
- * of characters until the null teminator '\0' is encounted.
+ * @s: the string whose length is to be determined
+ * The 'while' loop continues until end of string
+ * When '*s' is '\0'
+ * 'length' is incremented for each character in the strng
  *
  */
 int _strlen(char *s)
 {
-	int a = 0;
+	int x = 0;
 
-	while (s[a] != '\0')
+	while (*s)
 	{
-		a++;
+		x++;
+		s++;
 	}
 
-	return a;
+	return (x);
 }
+
