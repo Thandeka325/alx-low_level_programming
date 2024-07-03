@@ -16,7 +16,7 @@ void print_number(int n)
 	}
 	else
 	{
-		n1 = n
+		n1 = n;
 	}
 
 	/* Recursively print each digit */
