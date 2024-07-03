@@ -8,26 +8,41 @@
  */
 char *cap_string(char *str)
 {
-	int i, j;
+	int i = 0;
+	int cap_next = 1;
 
-	char spec[13] = {' ', '\t', '\n', ',', ';', '.',
-		'!', '?', '"', '(', ')', '{', '}'};
+	/* List of separators */
+	char separators[] = " \t\n,;.!?\"(){}";
 
-	for (i = 0; str[i] != '\0'; i++)
+	while (str[i] != '\0')
 	{
-		if (i == 0 && str[i] >= 'a' && str[i] <= 'z')
-			s[i] -= 32;
+		/* Check if current cha is a separator */
+		int is_separator = 0;
 
-		for (j = 0; j < 13; j++)
+		for (int j = 0; separator[j] != '\0'; j++)
 		{
-			if (str[i] == spec[j])
+			if (str[i] == separators[j])
 			{
-				if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
-				{
-					str[i + 1] -= 32;
-				}
+				is_separator = 1;
+				break;
 			}
 		}
+
+		if (is_separator)
+		{
+			cap_next = 1;
+		}
+		else if
+		{
+			str[i] = str[i] - 32;
+			ap_next = 0;
+		}
+		else
+		{
+			cap_next = 0;
+		}
+
+		i++;
 	}
 
 	return (str);
