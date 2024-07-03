@@ -21,7 +21,7 @@ char *cap_string(char *str)
 		}
 		else
 		{
-			for (ii = 0; sep[ii] != '0'; ii++)
+			for (ii = 0; sep[ii] != '\0'; ii++)
 			{
 				if (str[i - 1] == sep[ii])
 				{
