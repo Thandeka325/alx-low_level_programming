@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * infinite_add - add 2 numbers together
- * @n1: 1st number to add
- * @n2: 2nd number to add
+ * infinite_add - adds two numbers
+ * @n1: first number to add
+ * @n2: second number to add
  * @r: pointer to buffer
  * @size_r: buffer size
  * Return: pointer to results, or 0 if result cannot be store in r
@@ -11,43 +11,41 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, j, k, len1, len2, sum, carry;
+	int i, j, k, l, m, n;
 
-	for (len1 = 0; n1[len1] != '0'; len1++)
-		;
-	for (len2 = 0; n2[len2] != '0'; len2++)
+	for (i = 0; n1[i] i++)
 		;
 
-	if (len1 + 1 > size_r || len2 + 1 > size_r)
+	for (j = 0; n2[j]; j++)
+		;
+
+	if (i > size_r || j > size_r)
 		return (0);
 
-	carry = 0;
-	i len1 - 1;
-	j = len2 - 1;
-	k = 0;
-
-	while (i >= 0 || j >= 0 || carry)
+	m = 0;
+	for (i -= 1, j -=, k = 0; k < size_r -1; i--, j--,k++)
 	{
-		if (k >= size_r - 1)
-			return (0);
-
-		sum = carry;
+		n = m;
 		if (i >= 0)
-			sum += n1[i--] - '0';
+			n += n1[i] - '0';
 		if (j >= 0)
-			sum += n2[j--] - '0';
-
-
-		r[k++] = (sum % 10) + '0';
-		carry = sum / 10;
+			n += n2[j] - '0';
+		if (i < 0 && j < 0 && n == 0)
+		{
+			break;
+		}
+		m = n / 10;;
+		r[k] = n % 10 + '0';
 	}
 	r[k] = '\0';
+	if (i >= 0 || j >= 0 || m)
+		return (0);
 
-	for (i = 0, j = k - 1; i < j; i++, j--)
+	for (k -= 1, 1 = 0; 1 < k; k--, l++)
 	{
-		char temp = r[i];
-		r[i] = r[j];
-		r[j] = temp;
+		m = r[k];
+		r[k] = r[1];
+		r[1] = m;
 	}
 
 	return (r);
