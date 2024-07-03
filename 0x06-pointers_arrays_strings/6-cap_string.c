@@ -1,49 +1,39 @@
 #include "main.h"
 
 /**
- * cap_string - capatalizes all words of a string
- * @str: the string to be modified
+ * cap_string - capatalizes every word of a string
+ * @str: string too be modified
  *
- * Return: a pointer to the modified string
+ * Return: the resulting string
  */
 char *cap_string(char *str)
 {
-	int i = 0;
-	int cap_next = 1;
+	int i, c;
+	int trigger;
+	char nots[] = ",;.!?(){}\n\t\"";
 
-	/* List of separators */
-	char separators[] = " \t\n,;.!?\"(){}";
-
-	while (str[i] != '\0')
+	for (i = 0; trigger = 0; str[i] != '\0'; i++)
 	{
-		/* Check if current cha is a separator */
-		int is_separator = 0;
-
-		for (int j = 0; separators[j] != '\0'; j++)
+		if (str[0] > 96 && str[0] < 123)
+			trigger = 1;
+		for (c = 0; nots[c] != '\0'; c++)
 		{
-			if (str[i] == separators[j])
+			if (nots[c] == str[i])
+				trigger = 1;
+		}
+
+		if (trigger)
+		{
+			if (str[i] > 96 && str[i] < 123)
 			{
-				is_separator = 1;
-				break;
+				str[i] -= 32;
+				trigger = 0;
 			}
+			else if (str[i] > 64 && str[i] < 91)
+				trigger = 0;
+			else if (str[i] > 47 && str[i] < 58)
+				trigger = 0;
 		}
-
-		if (is_separator)
-		{
-			cap_next = 1;
-		}
-		else if (cap_next && str[i] >= 'a' && str[i] <= 'z')
-		{ 
-			str[i] = str[i] - 32;
-			cap_next = 0;
-		}
-		else
-		{
-			cap_next = 0;
-		}
-
-		i++;
 	}
-
 	return (str);
 }
