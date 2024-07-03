@@ -19,7 +19,7 @@ char *cap_string(char *str)
 		/* Check if current cha is a separator */
 		int is_separator = 0;
 
-		for (int j = 0; separator[j] != '\0'; j++)
+		for (int j = 0; separators[j] != '\0'; j++)
 		{
 			if (str[i] == separators[j])
 			{
@@ -32,10 +32,10 @@ char *cap_string(char *str)
 		{
 			cap_next = 1;
 		}
-		else if
-		{
+		else if (cap_next && str[i] >= 'a' && str[i] <= 'z')
+		{ 
 			str[i] = str[i] - 32;
-			ap_next = 0;
+			cap_next = 0;
 		}
 		else
 		{
