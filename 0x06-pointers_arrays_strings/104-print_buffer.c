@@ -11,7 +11,7 @@
  * shows the hexadecimal content (2 chars) of the buffer
  * '2' bytes at a time, separated by a space
  * shows the content of the buffer,
- *  If byte printable character, print the letter, if not, print'.'
+ * If byte printable character, print the letter, if not, print'.'
  * Each line ends with a new line \n
  * If size is 0 or less, the output should be a new line only \n
  */
