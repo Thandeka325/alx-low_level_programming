@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strchr - Gets the length os a prefix substring
+ * _strchr - Locates a character in a string
  * @s: string to be searched
  * @c: character to locate
  *
