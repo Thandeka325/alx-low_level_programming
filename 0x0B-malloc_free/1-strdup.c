@@ -6,7 +6,7 @@
  * which contains a copy of a string given as a parameter
  * @str: The string to be duplicated.
  * Memory for the new string is obtained with malloc, & freed with free
- * 
+ *
  * Return: Apointer to the duplicated string, or NULL if str is Null
  * or if insufficient memory was available
  */
