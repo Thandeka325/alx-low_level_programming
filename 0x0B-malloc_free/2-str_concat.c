@@ -6,7 +6,7 @@
  * @s1: The first string.
  * @s2: The second string
  * The returned pointer should point to a newly allocated space in memory,
- * which contains the contents of s1, followed by the contents of s2, and null terminated
+ * contains the contents of s1,followed by the contents of s2,and null terminated
  * If NULL is passed, treat it as an empty string
  *
  * Return: A pointer to the newly allocated space in memory containing,
