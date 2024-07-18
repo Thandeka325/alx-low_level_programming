@@ -3,7 +3,7 @@
 
 /**
  * _calloc - Allocates memory for an array, using malloc.
- * @nmemb: The number of elements in the aray.
+ * @nmemb: The number of elements in the array.
  * @size: The size in bytes of each element.
  * allocates memory for an array of nmemb elements of size bytes each
  *
@@ -27,7 +27,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	/* Set the allocated memory to zero */
 	for (i = 0; i < (nmemb * size); i++)
-		prt[i] = 0;
+		ptr[i] = 0;
 
 	return (ptr);
 }
