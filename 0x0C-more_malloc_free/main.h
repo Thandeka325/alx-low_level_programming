@@ -7,5 +7,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n);
 void *_calloc(unsigned int nmemb, unsigned int size);
 int *array_range(int min, int max);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+void _print_error(void);
+int _is_digit(char *s);
+void _print_result(char *result, int len);
+char *multiply(char *num1, char *num2);
 
 #endif /* MAIN_H */
