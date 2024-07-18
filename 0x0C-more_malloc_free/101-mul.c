@@ -78,7 +78,7 @@ char *multiply(char *num1, char *num2)
 		{
 			int n1 = num1[i] - '0';
 			int n2 = num2[j] - '0';
-			int sum = n1 * n2 + (rsult[i + j + 1] - '0' + carry;
+			int sum = n1 * n2 + (result[i + j + 1] - '0') + carry;
 
 			carry = sum / 10;
 			result[i + j + 1] = (sum % 10) + '0';
@@ -96,7 +96,8 @@ char *multiply(char *num1, char *num2)
  */
 int main(int argc, char *argv[])
 {
-	char *num1, num2, result;
+	char *num1, *num2, *result;
+	int len1 = 0, len2 = 0;
 
 	if (argc != 3)
 		_print_error();
@@ -105,8 +106,12 @@ int main(int argc, char *argv[])
 
 	if (!_is_digit(num1) || !_is_digit(num2))
 		_print_error();
+	while (num1[len1])
+		len1++;
+	while (num2[len2])
+		len2++;
 	result = multiply(num1, num2);
-	_print_resultt(result, len1, len2);
+	_print_result(result, len1 + len2);
 	free(result);
 	return (0);
 }
