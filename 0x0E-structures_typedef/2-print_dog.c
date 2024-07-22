@@ -6,7 +6,7 @@
  * print_dog - prints a struct dog
  * @d: A pointer to the struct dog to print.
  *
- * Descriptionn: This function prints the members of the struct dog
+ * Description: This function prints the members of the struct dog
  * pointed to by @d. If an element of d is NULL, it prints (nil)
  * instead of this element. If d is NULL, it prints nothing
  */
@@ -23,7 +23,7 @@ void print_dog(struct dog *d)
 	printf("Age: %.6f\n", d->age);
 
 	if (d->owner == NULL)
-		printf("Owner: (nill)\n");
+		printf("Owner: (nil)\n");
 	else
 		printf("Owner: %s\n", d->owner);
 }
