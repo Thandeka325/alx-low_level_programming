@@ -1,5 +1,6 @@
-#ifndef _LIST_H_
-#define _LIST_H_
+#ifndef LISTS_H_
+#define LISTS_H_
+#include <stdlib.h>
 
 /**
  * struct list_s - singly linked list
@@ -25,4 +26,4 @@ list_t *add_node_end(list_t **head, const char *str);
 void free_list(list_t *head);
 
 
-#endif /* _list_H_ */
+#endif /* LISTS_H */
