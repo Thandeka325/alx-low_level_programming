@@ -1,0 +1,1 @@
+This project is about file descriptors, and C programming in linux. Aimed and teaching us how to use the I/O system calls open, close, read, and write. And how to use the flags O_RDONLY, O_WRONLY, O_RDWR.
