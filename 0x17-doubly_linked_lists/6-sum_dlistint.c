@@ -6,25 +6,17 @@
  *
  * @head: Head of list
  *
- * Return: Sum of the data
+ * Return: Sum of the data, or 0 if the list is empty
  */
 int sum_dlistint(dlistint_t *head)
 {
 	int sum;
+	dlist_t *temp;
 
-	sum = 0;
+	temp = head;
 
-	if (head != NULL)
-	{
-		while (head->prev != NULL)
-			head = head->prev;
+	for (sum = 0; temp; temp = temp->next)
+		sum += temp->n;
 
-		while (head != NULL)
-		{
-			sum += head->n;
-			head = head->next;
-		}
-	}
-
-	return (sum);
+	return (sum)
 }
