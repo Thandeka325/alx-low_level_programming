@@ -263,3 +263,11 @@ The crackme will segfault if you do not enter the correct key for the user
 Usage for your keygen: ./keygen5 username
 Your keygen should print a valid key for the username
 
+
+RUN:
+gcc -Wall -pedantic -Werror -Wextra -std=gnu89 103-keygen.c -o keygen5
+./crackme5 julien javascript
+Result: Segmentation fault (core dumped)
+
+Run ./crackme5 julien `./keygen5 julien`
+Result: Congrats!
