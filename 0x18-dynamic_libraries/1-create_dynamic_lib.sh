@@ -10,4 +10,4 @@ gcc -shared -o liball.so *.o
 
 # Clean up the object files after the dynamic library is created
 
-rm -f *.o
+#rm -f *.o
