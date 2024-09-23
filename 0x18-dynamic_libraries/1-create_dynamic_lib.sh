@@ -1,13 +1,6 @@
 #!/bin/bash
-
-# Compile all .c files in current dir into position-independent code(.o files)
-
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -fPIC -c *.c
-
-# Create the dynamic library liball.so from all the .o files
-
 gcc -shared -o liball.so *.o
-
+export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 # Clean up the object files after the dynamic library is created
-
 rm -f *.o
