@@ -37,7 +37,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 /**
  * shash_table_set - Adds an element in a hash table.
  * @ht: The hash table you want to add or update the key/value to.
- * @ht: The hash table you want to add or update the key/value to.
+ * @key: The key.
  * @value: The value associated with key.value must be duplicated
  * value can be an empty string
  *
