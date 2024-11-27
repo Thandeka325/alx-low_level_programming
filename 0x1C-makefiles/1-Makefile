@@ -1,0 +1,10 @@
+# Variables
+CC = gcc
+SRC = main.c
+
+# Name of executable
+EXEC = school
+
+# Rule to build the executable
+all:
+	$(CC) -o $(EXEC) $(SRC)
