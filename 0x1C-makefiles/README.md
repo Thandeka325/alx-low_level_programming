@@ -12,3 +12,6 @@ This is an introduction to Make files, and how they work.
 [make-official documentation](https://www.gnu.org/software/make/manual/html_node/)
 
 [More about Makefile](https://www.google.com/search?q=makefile)
+
+
+Files used for this project are [here](https://github.com/alx-tools/0x1B.c/tree/master)
