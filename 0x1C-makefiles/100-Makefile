@@ -1,4 +1,4 @@
-i# Variables
+# Variables
 CC = gcc
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
@@ -7,7 +7,7 @@ RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 # Rule to build executable
-all: $(OBJ)
+all: m.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:
