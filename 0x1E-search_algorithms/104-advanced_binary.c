@@ -1,73 +1,62 @@
 #include "search_algos.h"
 
 /**
- * print_array - Prints the elements of an array within a given range.
- * @array: Pointer to the first element of the array.
- * @low: The starting index of the range to print.
- * @high: The ending index of the range to print.
+ * advanced_binary_helper - searches for a value in an array of
+ * integers using the Binary search algorithm
+ * @array: input array
+ * @size: size of the array
+ * @value: value to search in
+ * Return: index of the number
  */
-void print_array(int *array, size_t low, size_t high)
+int advanced_binary_helper(int *array, size_t size, int value)
 {
+	size_t half = size / 2;
 	size_t i;
 
-	printf("Searching in array: ");
-
-	for (i = low; i <= high; i++)
-	{
-		printf("%d", array[i]);
-		if (i < high)
-			printf(", ");
-	}
-
-	printf("\n");
-}
-
-/**
- * advanced_binary_helper - Helper function for the advanced binary search.
- * @array: Pointer to the first element of the array to search in.
- * @low: The starting index of the subarray.
- * @high: The ending index of the subarray.
- * @value: The value to search for.
- *
- * Return: The index where the value is located, or -1 if not found.
- */
-int advanced_binary_helper(int *array, size_t low, size_t high, int value)
-{
-	size_t mid;
-
-	if (low > high)
+	if (array == NULL || size == 0)
 		return (-1);
 
-	print_array(array, low, high);
+	printf("Searching in array");
 
-	mid = low + (high - low) / 2;
+	for (i = 0; i < size; i++)
+		printf("%s %d", (i == 0) ? ":" : ",", array[i]);
 
-	if (array[mid] == value)
+	printf("\n");
+
+	if (half && size % 2 == 0)
+		half--;
+
+	if (value == array[half])
 	{
-		if (mid == low || array[mid - 1] != value)
-			return (mid);
-		return (advanced_binary_helper(array, low, mid - 1, value));
+		if (half > 0)
+			return (advanced_binary_helper(array, half + 1, value));
+		return ((int)half);
 	}
 
-	else if (array[mid] < value)
-		return (advanced_binary_helper(array, mid + 1, high, value));
-	else
-		return (advanced_binary_helper(array, low, mid - 1, value));
+	if (value < array[half])
+		return (advanced_binary_helper(array, half + 1, value));
+
+	half++;
+	return (advanced_binary_helper(array + half, size - half, value) + half);
 }
 
 /**
- * advanced_binary - Searches for a value in a sorted array of integers
- * using an advanced binary search algorithm.
- * @array: Pointer to the first element of the array to search in.
- * @size: The number of elements in the array.
- * @value: The value to search for.
+ * advanced_binary - calls to rec_search to return
+ * the index of the number
  *
- * Return: The index where the value is located, or -1 if not found or
- * if the array is NULL.
+ * @array: input array
+ * @size: size of the array
+ * @value: value to search in
+ * Return: index of the number
  */
 int advanced_binary(int *array, size_t size, int value)
 {
-	if (array == NULL || size == 0)
+	int index;
+
+	index = advanced_binary_helper(array, size, value);
+
+	if (index >= 0 && array[index] != value)
 		return (-1);
-	return (advanced_binary_helper(array, 0, size - 1, value));
+
+	return (index);
 }
