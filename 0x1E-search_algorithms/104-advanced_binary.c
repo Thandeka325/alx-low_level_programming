@@ -46,8 +46,9 @@ int advanced_binary_helper(int *array, size_t low, size_t high, int value)
 	{
 		if (mid == low || array[mid - 1] != value)
 			return (mid);
-		return (advanced_binary_helper(array, low, mid, value));
+		return (advanced_binary_helper(array, low, mid - 1, value));
 	}
+
 	else if (array[mid] < value)
 		return (advanced_binary_helper(array, mid + 1, high, value));
 	else
