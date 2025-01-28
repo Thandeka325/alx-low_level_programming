@@ -13,34 +13,33 @@
  */
 int jump_search(int *array, size_t size, int value)
 {
-	size_t step, prev, i;
+	int step, prev, index;
 
 	if (array == NULL || size == 0)
 		return (-1);
 
-	/* Determine jump step as the square root of the array size */
-	step = sqrt(size);
+	/* Calculate the step size */
+	step = (int)sqrt((double)size);
 	prev = 0;
+	index = 0;
 
-	/* Jump in blocks to find the range where the value may exist */
-	while (prev < size && array[prev] < value)
+	/* Jump in blocks to locate the potential range */
+	while (index < (int)size && array[index] < value)
 	{
-		printf("Value checked array[%lu] = [%d]\n", prev, array[prev]);
-		prev += step;
+		printf("Value checked array[%d] = [%d]\n", index, array[index]);
+		prev = index;
+		index += step;
 	}
 
-	/* Find the block's start and end */
-	size_t start = prev > step ? prev - step : 0;
-	size_t end = prev < size ? prev : size - 1;
+	/* Print the range where the value may exist */
+	printf("Value found between indexes [%d] and [%d]\n", prev, index);
 
-	printf("Value found between indexes [%lu] and [%lu]\n", start, end);
-
-	/* Perform linear search within the block */
-	for (i = start; i <= end && i < size; i++)
+	/* Perform linear search in the identified range */
+	for (; prev < (int)size && prev <= index; prev++)
 	{
-		printf("Value checked array[%lu] = [%d]\n", i, array[i]);
-		if (array[i] == value)
-			return (i);
+		printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
+		if (array[prev] == value)
+			return (prev);
 	}
 
 	/* Value not found */
